@@ -1,3 +1,5 @@
+// Referenced from: https://github.com/rsnemmen/OpenCL-examples/blob/master/square_array
+
 #ifndef __OPENCLUTILS__
 #define __OPENCLUTILS__
 
