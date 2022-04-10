@@ -5,8 +5,8 @@
 
 __kernel void copy_img(__global uint8_t* src, __global uint8_t* dst)
 {
-    int x = 8 * get_global_id(0) % 608;
-    int y = 8 * get_global_id(0) / 608;
+    int x = get_global_id(0) % 608;
+    int y = get_global_id(0) / 608;
 
-    *(__global uint64_t*)&dst[y * 608 + x] = *(__global uint64_t*)&src[y * 608 + x];
+    dst[y * 608 + x] = src[y * 608 + x];
 }
